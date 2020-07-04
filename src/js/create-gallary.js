@@ -5,3 +5,5 @@ const menuRef = document.querySelector('ul.js-menu');
 const markup = itemTamplate(mealMenu);
 
 menuRef.insertAdjacentHTML('beforeend', markup);
+
+console.log('Creation finished');

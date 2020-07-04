@@ -10,14 +10,13 @@ if (savedTheme) {
   switchRef.checked = JSON.parse(savedChecked);
 }
 
-if (localStorage.getItem('theme'))
-  switchRef.addEventListener('change', event => {
-    if (event.target.checked) {
-      swithedDarkRheme();
-    } else {
-      swithedWhiteTheme();
-    }
-  });
+switchRef.addEventListener('change', event => {
+  if (event.target.checked) {
+    swithedDarkRheme();
+  } else {
+    swithedWhiteTheme();
+  }
+});
 
 function swithedWhiteTheme() {
   bodyRef.classList.add('light-theme');
@@ -31,3 +30,4 @@ function swithedDarkRheme() {
   localStorage.setItem('theme', 'dark-theme');
   localStorage.setItem('checked', 'true');
 }
+console.log('switching is ready');
